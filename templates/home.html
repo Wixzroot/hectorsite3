@@ -4,63 +4,265 @@
 
 {% block content %}
 
-<section class="hh-home">
+<section class="home-page">
 
-  <!-- ================= HERO ================= -->
 
-  <section class="hero-section">
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
 
-    <div class="hero-content">
+  <section class="hero">
 
-      <!-- Trustpilot -->
-      <div class="trustpilot-rating">
+    <div class="hero-background"></div>
 
-        <span class="trust-stars">
-          ★★★★★
-        </span>
+    <div class="hero-container">
 
-        <strong>4.8</strong>
 
-        <span>Excellent</span>
+      <div class="hero-content">
 
-        <span>on Trustpilot</span>
+
+        <!-- TRUSTPILOT -->
+
+        <div class="trustpilot-rating">
+
+          <span class="trust-stars">
+            ★★★★★
+          </span>
+
+          <strong>
+            4.8
+          </strong>
+
+          <span>
+            Excellent
+          </span>
+
+          <span class="trustpilot-text">
+            on Trustpilot
+          </span>
+
+        </div>
+
+
+        <!-- HEADING -->
+
+        <h1>
+
+          Premium Hosting
+          <br>
+
+          Built for Performance
+
+        </h1>
+
+
+        <!-- BLUE/PURPLE LINE -->
+
+        <div class="hero-line"></div>
+
+
+        <!-- DESCRIPTION -->
+
+        <p class="hero-description">
+
+          High-performance game servers, VPS hosting
+          and reliable infrastructure built for speed,
+          security and uptime.
+
+        </p>
+
+
+        <!-- BUTTONS -->
+
+        <div class="hero-actions">
+
+
+          <a
+            href="{{ url_for('pricing') }}"
+            class="hero-button hero-button-primary"
+          >
+
+            Get Started Now
+
+            <span>
+              →
+            </span>
+
+          </a>
+
+
+          <a
+            href="{{ url_for('game_servers') }}"
+            class="hero-button hero-button-secondary"
+          >
+
+            Explore Services
+
+          </a>
+
+
+        </div>
+
 
       </div>
 
 
-      <h1>
-        Premium Hosting<br>
-        Built for Performance
-      </h1>
+      <!-- RIGHT SIDE VISUAL -->
+
+      <div class="hero-visual">
+
+        <div class="hero-glow"></div>
+
+        <div class="server-shape server-shape-one"></div>
+
+        <div class="server-shape server-shape-two"></div>
+
+        <div class="server-shape server-shape-three"></div>
+
+      </div>
 
 
-      <div class="hero-line"></div>
+    </div>
+
+  </section>
 
 
-      <p>
-        High-performance game servers, VPS hosting and
-        reliable infrastructure built for speed, security
-        and uptime.
-      </p>
+
+  <!-- =====================================================
+       SERVICES
+  ====================================================== -->
+
+  <section class="services-section">
+
+    <div class="section-container">
 
 
-      <div class="hero-actions">
+      <div class="section-heading">
 
-        <a
-          href="{{ url_for('pricing') }}"
-          class="hero-btn hero-btn-primary"
-        >
-          Get Started Now
-          <span>→</span>
-        </a>
+        <span>
+          OUR SERVICES
+        </span>
 
+        <h2>
+          Infrastructure for every project.
+        </h2>
+
+        <p>
+          Powerful hosting solutions designed for
+          communities, developers and businesses.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+
+        <!-- GAME SERVERS -->
 
         <a
           href="{{ url_for('game_servers') }}"
-          class="hero-btn hero-btn-secondary"
+          class="service-card"
         >
-          Explore Services
+
+          <div class="service-card-top">
+
+            <span class="service-number">
+              01
+            </span>
+
+            <span class="service-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            Game Servers
+          </h3>
+
+          <p>
+            High-performance game hosting with
+            powerful hardware, DDoS protection
+            and fast deployment.
+          </p>
+
+          <span class="service-link">
+            Explore Game Servers →
+          </span>
+
         </a>
+
+
+        <!-- VPS -->
+
+        <a
+          href="{{ url_for('vps') }}"
+          class="service-card"
+        >
+
+          <div class="service-card-top">
+
+            <span class="service-number">
+              02
+            </span>
+
+            <span class="service-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            VPS Hosting
+          </h3>
+
+          <p>
+            Reliable virtual servers with powerful
+            CPUs, flexible resources and full root access.
+          </p>
+
+          <span class="service-link">
+            Explore VPS →
+          </span>
+
+        </a>
+
+
+        <!-- OTHER HOSTING -->
+
+        <a
+          href="{{ url_for('features') }}"
+          class="service-card"
+        >
+
+          <div class="service-card-top">
+
+            <span class="service-number">
+              03
+            </span>
+
+            <span class="service-arrow">
+              ↗
+            </span>
+
+          </div>
+
+          <h3>
+            Other Hosting
+          </h3>
+
+          <p>
+            Reliable infrastructure for websites,
+            applications and other online projects.
+          </p>
+
+          <span class="service-link">
+            Explore Services →
+          </span>
+
+        </a>
+
 
       </div>
 
@@ -69,143 +271,44 @@
   </section>
 
 
-  <!-- ================= SERVICES ================= -->
 
-  <section class="home-services">
+  <!-- =====================================================
+       CTA
+  ====================================================== -->
 
-    <div class="home-section-heading">
+  <section class="cta-section">
 
-      <span>
-        OUR SERVICES
-      </span>
+    <div class="cta-container">
 
-      <h2>
-        Infrastructure for every project.
-      </h2>
+      <div>
 
-    </div>
-
-
-    <div class="home-service-grid">
-
-
-      <!-- GAME SERVERS -->
-
-      <a
-        href="{{ url_for('game_servers') }}"
-        class="home-service-card"
-      >
-
-        <span class="service-number">
-          01
+        <span class="cta-label">
+          READY TO DEPLOY?
         </span>
 
-        <h3>
-          Game Servers
-        </h3>
+        <h2>
+          Build your infrastructure with HectorHosting.
+        </h2>
 
         <p>
-          High-performance game servers with powerful
-          hardware, DDoS protection and fast deployment.
+          Choose your hosting solution and get started today.
         </p>
 
-        <span class="service-link">
-          Explore →
-        </span>
-
-      </a>
+      </div>
 
 
-      <!-- VPS -->
-
-      <a
-        href="{{ url_for('vps') }}"
-        class="home-service-card"
-      >
-
-        <span class="service-number">
-          02
-        </span>
-
-        <h3>
-          VPS Hosting
-        </h3>
-
-        <p>
-          Reliable VPS infrastructure with full root
-          access, powerful CPUs and flexible resources.
-        </p>
-
-        <span class="service-link">
-          Explore →
-        </span>
-
-      </a>
-
-
-      <!-- WEB HOSTING -->
-
-      <a
-        href="{{ url_for('contact') }}"
-        class="home-service-card"
-      >
-
-        <span class="service-number">
-          03
-        </span>
-
-        <h3>
-          Web Hosting
-        </h3>
-
-        <p>
-          Fast and reliable hosting for websites,
-          applications and online projects.
-        </p>
-
-        <span class="service-link">
-          Contact Us →
-        </span>
-
-      </a>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= BOTTOM CTA ================= -->
-
-  <section class="home-services">
-
-    <div class="home-service-card">
-
-      <span class="service-number">
-        HECTORHOSTING
-      </span>
-
-      <h3>
-        Ready to deploy?
-      </h3>
-
-      <p>
-        Choose your hosting solution and get your
-        infrastructure online with HectorHosting.
-      </p>
-
-      <div class="hero-actions">
+      <div class="cta-actions">
 
         <a
           href="{{ url_for('pricing') }}"
-          class="hero-btn hero-btn-primary"
+          class="hero-button hero-button-primary"
         >
           View Plans →
         </a>
 
         <a
           href="{{ url_for('register') }}"
-          class="hero-btn hero-btn-secondary"
+          class="hero-button hero-button-secondary"
         >
           Create Account
         </a>
@@ -215,6 +318,7 @@
     </div>
 
   </section>
+
 
 </section>
 
