@@ -5,83 +5,44 @@
 {% block content %}
 
 <div style="
-    min-height: 650px;
-    padding: 100px 8%;
-    background: #070709;
-    color: white;
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    min-height:600px;
+    padding:100px;
+    background:#08080a;
+    color:#ffffff;
 ">
 
-    <div style="
-        color: #a855f7;
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 25px;
-    ">
-        ★★★★★ &nbsp; 4.9 &nbsp; 147 Ratings
-    </div>
-
     <h1 style="
-        font-size: 70px;
-        line-height: 1.05;
-        margin: 0;
-        color: white;
+        display:block !important;
+        color:#ffffff !important;
+        font-size:60px;
     ">
-        Premium Hosting<br>
-        Built for Performance
+        HECTORHOSTING
     </h1>
 
-    <div style="
-        width: 140px;
-        height: 4px;
-        background: #8b5cf6;
-        margin: 30px 0;
-    "></div>
-
     <p style="
-        max-width: 650px;
-        font-size: 18px;
-        line-height: 1.8;
-        color: #9999a3;
+        display:block !important;
+        color:#aaaaaa !important;
+        font-size:20px;
     ">
-        High-performance game servers, VPS hosting and reliable
-        infrastructure built for speed, security and uptime.
+        Premium Hosting Built for Performance
     </p>
 
-    <div style="
-        display: flex;
-        gap: 15px;
-        margin-top: 35px;
-    ">
-
-        <a
-            href="{{ url_for('pricing') }}"
-            style="
-                display: inline-block;
-                padding: 17px 30px;
-                background: #7c3aed;
-                color: white;
-                text-decoration: none;
-                font-weight: 600;
-            "
-        >
-            Get Started Now →
-        </a>
-
-        <a
-            href="{{ url_for('game_servers') }}"
-            style="
-                display: inline-block;
-                padding: 17px 30px;
-                border: 1px solid rgba(255,255,255,.15);
-                color: white;
-                text-decoration: none;
-                font-weight: 600;
-            "
-        >
-            Explore Services
-        </a>
-
-    </div>
+    <a
+        href="{{ url_for('pricing') }}"
+        style="
+            display:inline-block;
+            margin-top:30px;
+            padding:16px 30px;
+            background:#7c3aed;
+            color:white;
+            text-decoration:none;
+        "
+    >
+        Get Started
+    </a>
 
 </div>
 
