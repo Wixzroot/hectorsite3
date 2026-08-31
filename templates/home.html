@@ -1,204 +1,163 @@
 {% extends "base.html" %}
 
-{% block title %}HectorHosting{% endblock %}
+{% block title %}HectorHosting - Premium Hosting{% endblock %}
 
 {% block content %}
 
-<section class="hh-home">
+<section class="hero-section">
 
-  <!-- Service Cards -->
-  <div class="wrap">
+    <!-- Background -->
+    <div class="hero-background">
+        <div class="hero-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
 
-    <div class="service-grid">
-
-      <a href="{{ url_for('game_servers') }}" class="service-card">
-        <div class="service-top">
-          <div class="service-icon minecraft-icon">◇</div>
-          <div>
-            <h3>Minecraft Hosting</h3>
-            <p>Budget and premium Minecraft hosting with Pterodactyl Panel</p>
-          </div>
-          <span class="service-menu">••</span>
-        </div>
-
-        <div class="service-bottom">
-          <div>
-            <strong>₹149</strong>
-            <span>/month</span>
-          </div>
-          <span class="service-arrow">›</span>
-        </div>
-      </a>
-
-
-      <a href="{{ url_for('vps') }}" class="service-card">
-        <div class="service-top">
-          <div class="service-icon vps-icon">▣</div>
-          <div>
-            <h3>VPS Hosting</h3>
-            <p>India and Germany VPS hosting with full root access</p>
-          </div>
-          <span class="service-menu">••</span>
-        </div>
-
-        <div class="service-bottom">
-          <div>
-            <strong>₹349</strong>
-            <span>/month</span>
-          </div>
-          <span class="service-arrow">›</span>
-        </div>
-      </a>
-
-
-      <a href="{{ url_for('contact') }}" class="service-card">
-        <div class="service-top">
-          <div class="service-icon web-icon">⌘</div>
-          <div>
-            <h3>Web Hosting</h3>
-            <p>Reliable web hosting with optimized performance</p>
-          </div>
-          <span class="service-menu">••</span>
-        </div>
-
-        <div class="service-bottom">
-          <div>
-            <strong>₹99</strong>
-            <span>/month</span>
-          </div>
-          <span class="service-arrow">›</span>
-        </div>
-      </a>
-
-
-      <a href="{{ url_for('contact') }}" class="service-card">
-        <div class="service-top">
-          <div class="service-icon discord-icon">●</div>
-          <div>
-            <h3>Discord Bot</h3>
-            <p>Frankfurt and Washington D.C. bot hosting with backup security</p>
-          </div>
-          <span class="service-menu">••</span>
-        </div>
-
-        <div class="service-bottom">
-          <div>
-            <strong>₹30</strong>
-            <span>/month</span>
-          </div>
-          <span class="service-arrow">›</span>
-        </div>
-      </a>
-
+        <div class="hero-orbit hero-orbit-1"></div>
+        <div class="hero-orbit hero-orbit-2"></div>
     </div>
 
 
-    <!-- Performance Banner -->
-    <div class="feature-banner performance-banner">
+    <div class="hero-container">
 
-      <div class="feature-stat">
-        <span class="feature-label">SERVER PERFORMANCE</span>
-        <strong>3.0GHz</strong>
-        <span class="feature-small">HARDWARE OPTIONS</span>
-      </div>
+        <div class="hero-content">
 
-      <div class="feature-content">
-        <p>
-          Our Minecraft plans are easy to understand. Budget plans are a good
-          fit for small private servers, simple survival worlds, and lower
-          player counts. Premium plans are better for bigger worlds, more
-          plugins,
-          more players, and people who want stronger performance from day one.
-        </p>
-      </div>
+            <!-- Trustpilot -->
+            <a
+                href="https://www.trustpilot.com/review/hector.host"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="trustpilot-rating"
+            >
+                <span class="trustpilot-stars">★★★★★</span>
+                <span class="trustpilot-score">4.0</span>
+                <span class="trustpilot-reviews">· 3 REVIEWS</span>
+            </a>
+
+
+            <!-- Main Heading -->
+            <h1>
+                Premium Hosting
+                <br>
+                <span>Built for Performance</span>
+            </h1>
+
+
+            <!-- Accent Line -->
+            <div class="hero-line"></div>
+
+
+            <!-- Description -->
+            <p class="hero-description">
+                HectorHosting provides high-performance Minecraft hosting,
+                VPS hosting, web hosting, and Discord bot hosting in one place.
+                With powerful infrastructure, DDoS protection, off-site
+                backups, and reliable support, we keep your services online
+                and ready for your community.
+            </p>
+
+
+            <!-- Buttons -->
+            <div class="hero-buttons">
+
+                <a
+                    href="{{ url_for('pricing') }}"
+                    class="hero-btn hero-btn-primary"
+                >
+                    <span>Get Started Now</span>
+                    <b>›</b>
+                </a>
+
+                <a
+                    href="{{ url_for('game_servers') }}"
+                    class="hero-btn hero-btn-secondary"
+                >
+                    Explore Services
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
+</section>
 
-    <!-- Game Hosting / DDoS -->
-    <div class="feature-banner security-banner">
 
-      <div class="security-content">
-        <p>
-          Game hosting comes with DDoS protection and off-site backups.
-          If your server breaks after an update, a bad plugin, or a world
-          issue, you can restore a backup and get back online faster.
-        </p>
-      </div>
+<!-- Small section below hero -->
+<section class="home-services">
 
-      <div class="security-stat">
-        <span class="feature-label">DDOS SECURITY</span>
-        <strong>10<span>Tbps</span></strong>
-      </div>
+    <div class="home-services-container">
+
+        <div class="home-section-heading">
+            <span>OUR SERVICES</span>
+            <h2>Everything you need to host.</h2>
+            <p>
+                Reliable infrastructure for games, applications, websites,
+                and online communities.
+            </p>
+        </div>
+
+
+        <div class="home-service-grid">
+
+            <a
+                href="{{ url_for('game_servers') }}"
+                class="home-service-card"
+            >
+                <div class="home-service-number">01</div>
+                <h3>Minecraft Hosting</h3>
+                <p>
+                    High-performance Minecraft servers with powerful hardware,
+                    DDoS protection and easy management.
+                </p>
+                <span>Explore Hosting →</span>
+            </a>
+
+
+            <a
+                href="{{ url_for('vps') }}"
+                class="home-service-card"
+            >
+                <div class="home-service-number">02</div>
+                <h3>VPS Hosting</h3>
+                <p>
+                    Reliable VPS infrastructure with full root access and
+                    flexible resources for your applications.
+                </p>
+                <span>Explore VPS →</span>
+            </a>
+
+
+            <a
+                href="{{ url_for('contact') }}"
+                class="home-service-card"
+            >
+                <div class="home-service-number">03</div>
+                <h3>Web Hosting</h3>
+                <p>
+                    Fast and reliable hosting for websites, applications and
+                    online projects.
+                </p>
+                <span>Learn More →</span>
+            </a>
+
+
+            <a
+                href="{{ url_for('contact') }}"
+                class="home-service-card"
+            >
+                <div class="home-service-number">04</div>
+                <h3>Discord Bot Hosting</h3>
+                <p>
+                    Keep your Discord bots online with reliable infrastructure
+                    and consistent performance.
+                </p>
+                <span>Learn More →</span>
+            </a>
+
+        </div>
 
     </div>
-
-
-    <!-- Why HectorHosting -->
-    <section class="hh-about">
-
-      <div class="hh-about-heading">
-        <span class="feature-label">WHY HECTORHOSTING</span>
-        <h2>Infrastructure built for reliability.</h2>
-        <p>
-          High-performance infrastructure, straightforward pricing and
-          protection designed for communities and businesses.
-        </p>
-      </div>
-
-      <div class="hh-about-grid">
-
-        <div>
-          <span class="about-number">01</span>
-          <h3>High Performance</h3>
-          <p>Powerful hardware designed for demanding workloads.</p>
-        </div>
-
-        <div>
-          <span class="about-number">02</span>
-          <h3>DDoS Protection</h3>
-          <p>Network protection designed to keep your services online.</p>
-        </div>
-
-        <div>
-          <span class="about-number">03</span>
-          <h3>Fast Deployment</h3>
-          <p>Deploy your server quickly and get started without unnecessary delays.</p>
-        </div>
-
-        <div>
-          <span class="about-number">04</span>
-          <h3>Simple Control</h3>
-          <p>Manage your hosting through an easy-to-use control panel.</p>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CTA -->
-    <section class="hh-cta">
-
-      <div>
-        <span class="feature-label">READY TO DEPLOY?</span>
-        <h2>Build your server with HectorHosting.</h2>
-        <p>Choose a plan and get your infrastructure online.</p>
-      </div>
-
-      <div class="hh-cta-actions">
-        <a href="{{ url_for('pricing') }}" class="hh-btn hh-btn-primary">
-          View Plans
-        </a>
-
-        <a href="{{ url_for('register') }}" class="hh-btn hh-btn-secondary">
-          Create Account
-        </a>
-      </div>
-
-    </section>
-
-  </div>
 
 </section>
 
