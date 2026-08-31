@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Game Servers{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow-plain">Game Servers</span>
+    <h1>One-click servers for your community</h1>
+    <p class="hero-lede">Pick a game, pick a slot count, and your server is live. Mod support, automated backups, and a web console come standard.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="plan-grid">
+
+      <article class="plan-card">
+        <h3>Community</h3>
+        <p class="plan-price">$4<span>/mo</span></p>
+        <ul class="check-list">
+          <li>Up to 10 player slots</li>
+          <li>2 GB RAM allocation</li>
+          <li>10 GB NVMe storage</li>
+          <li>Automatic restarts</li>
+        </ul>
+        <a href="{{ url_for('register') }}" class="btn btn-ghost">Deploy Community</a>
+      </article>
+
+      <article class="plan-card plan-card--popular">
+        <span class="plan-badge">Most deployed</span>
+        <h3>Squad</h3>
+        <p class="plan-price">$10<span>/mo</span></p>
+        <ul class="check-list">
+          <li>Up to 30 player slots</li>
+          <li>4 GB RAM allocation</li>
+          <li>25 GB NVMe storage</li>
+          <li>Mod & plugin manager</li>
+          <li>Daily automated backups</li>
+        </ul>
+        <a href="{{ url_for('register') }}" class="btn btn-primary">Deploy Squad</a>
+      </article>
+
+      <article class="plan-card">
+        <h3>Guild</h3>
+        <p class="plan-price">$22<span>/mo</span></p>
+        <ul class="check-list">
+          <li>Up to 80 player slots</li>
+          <li>8 GB RAM allocation</li>
+          <li>60 GB NVMe storage</li>
+          <li>Mod & plugin manager</li>
+          <li>Daily automated backups</li>
+          <li>Priority support queue</li>
+        </ul>
+        <a href="{{ url_for('register') }}" class="btn btn-ghost">Deploy Guild</a>
+      </article>
+
+      <article class="plan-card">
+        <h3>Network</h3>
+        <p class="plan-price">$45<span>/mo</span></p>
+        <ul class="check-list">
+          <li>Unlimited player slots*</li>
+          <li>16 GB RAM allocation</li>
+          <li>120 GB NVMe storage</li>
+          <li>Multi-server / proxy support</li>
+          <li>Hourly automated backups</li>
+          <li>Priority support queue</li>
+        </ul>
+        <a href="{{ url_for('register') }}" class="btn btn-ghost">Deploy Network</a>
+      </article>
+
+    </div>
+    <p class="plan-footnote">*Subject to fair-use resource limits for your allocated RAM. All plans support Minecraft (Java & Bedrock), Rust, ARK: Survival Ascended, CS2, Valheim, Palworld, and more.</p>
+  </div>
+</section>
+
+<section class="section alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What's included on every game server</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Web console</h3>
+        <p>Manage your server, install mods, and read the live console from your browser — no SSH needed.</p>
+      </div>
+      <div class="why-item">
+        <h3>DDoS mitigation</h3>
+        <p>Network-level filtering is on by default for every game server, at every plan tier.</p>
+      </div>
+      <div class="why-item">
+        <h3>Scheduled backups</h3>
+        <p>Automatic backups run before every update, with one-click restore from any restore point.</p>
+      </div>
+      <div class="why-item">
+        <h3>Instant slot upgrades</h3>
+        <p>Outgrew your plan? Upgrade RAM and slots without touching your world files.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

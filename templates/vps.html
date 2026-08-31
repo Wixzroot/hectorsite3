@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}VPS Hosting{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow-plain">VPS Hosting</span>
+    <h1>Virtual servers with dedicated resources</h1>
+    <p class="hero-lede">KVM virtualization, NVMe storage, and a full root shell. Pick a size, pick a region, and you're deployed in under a minute.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="plan-grid">
+
+      <article class="plan-card">
+        <h3>Starter</h3>
+        <p class="plan-price">$5<span>/mo</span></p>
+        <ul class="check-list">
+          <li>1 vCPU core</li>
+          <li>2 GB RAM</li>
+          <li>40 GB NVMe storage</li>
+          <li>2 TB bandwidth</li>
+          <li>1 dedicated IPv4</li>
+        </ul>
+        <a href="{{ url_for('register') }}" class="btn btn-ghost">Deploy Starter</a>
+      </article>
+
+      <article class="plan-card plan-card--popular">
+        <span class="plan-badge">Most deployed</span>
+        <h3>Growth</h3>
+        <p class="plan-price">$14<span>/mo</span></p>
+        <ul class="check-list">
+          <li>2 vCPU cores</li>
+          <li>4 GB RAM</li>
+          <li>80 GB NVMe storage</li>
+          <li>4 TB bandwidth</li>
+          <li>1 dedicated IPv4</li>
+          <li>Daily automated snapshot</li>
+        </ul>
+        <a href="{{ url_for('register') }}" class="btn btn-primary">Deploy Growth</a>
+      </article>
+
+      <article class="plan-card">
+        <h3>Scale</h3>
+        <p class="plan-price">$29<span>/mo</span></p>
+        <ul class="check-list">
+          <li>4 vCPU cores</li>
+          <li>8 GB RAM</li>
+          <li>160 GB NVMe storage</li>
+          <li>8 TB bandwidth</li>
+          <li>1 dedicated IPv4</li>
+          <li>Daily automated snapshot</li>
+          <li>Priority support queue</li>
+        </ul>
+        <a href="{{ url_for('register') }}" class="btn btn-ghost">Deploy Scale</a>
+      </article>
+
+      <article class="plan-card">
+        <h3>Performance</h3>
+        <p class="plan-price">$59<span>/mo</span></p>
+        <ul class="check-list">
+          <li>8 vCPU cores</li>
+          <li>16 GB RAM</li>
+          <li>320 GB NVMe storage</li>
+          <li>16 TB bandwidth</li>
+          <li>2 dedicated IPv4</li>
+          <li>Hourly automated snapshot</li>
+          <li>Priority support queue</li>
+        </ul>
+        <a href="{{ url_for('register') }}" class="btn btn-ghost">Deploy Performance</a>
+      </article>
+
+    </div>
+
+    <p class="plan-footnote">Need more cores, RAM, or storage than listed here? <a href="{{ url_for('contact') }}">Contact us</a> for a custom configuration.</p>
+  </div>
+</section>
+
+<section class="section alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What's included on every VPS</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Choice of OS</h3>
+        <p>Ubuntu, Debian, Rocky Linux, AlmaLinux, Fedora, Arch, and Windows Server images, ready in one click.</p>
+      </div>
+      <div class="why-item">
+        <h3>Full root access</h3>
+        <p>SSH in immediately with no restrictions on what you install or configure.</p>
+      </div>
+      <div class="why-item">
+        <h3>Firewall included</h3>
+        <p>A configurable network firewall sits in front of every instance at no extra cost.</p>
+      </div>
+      <div class="why-item">
+        <h3>Instant resizing</h3>
+        <p>Scale cores, RAM, or storage up as you grow, with a single reboot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

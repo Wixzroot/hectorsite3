@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Pricing{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow-plain">Pricing</span>
+    <h1>The price on the page is the price you pay</h1>
+    <p class="hero-lede">No teaser rates that triple on renewal. Cancel anytime — you're only billed for the time you use.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="pricing-split">
+      <a href="{{ url_for('vps') }}" class="pricing-link-card">
+        <h2>VPS Hosting</h2>
+        <p>Plans from <strong>$5/mo</strong></p>
+        <span class="link-arrow">View VPS plans</span>
+      </a>
+      <a href="{{ url_for('game_servers') }}" class="pricing-link-card pricing-link-card--game">
+        <h2>Game Servers</h2>
+        <p>Plans from <strong>$4/mo</strong></p>
+        <span class="link-arrow">View game server plans</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Billing details</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><h3>Monthly or hourly</h3><p>Commit monthly for the lowest rate, or pay hourly for short-lived instances.</p></div>
+      <div class="why-item"><h3>No setup fees</h3><p>Every plan on this site includes deployment at no extra cost.</p></div>
+      <div class="why-item"><h3>Prorated upgrades</h3><p>Move to a bigger plan mid-cycle and only pay the difference.</p></div>
+      <div class="why-item"><h3>Cancel anytime</h3><p>No lock-in contracts. Cancel from your dashboard in a couple of clicks.</p></div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

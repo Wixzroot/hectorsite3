@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h1>Welcome back, {{ current_user.display_name }}</h1>
+      <p>This is a starting point for your server management panel. Wire up real VPS/game-server provisioning here.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>No servers yet</h3>
+        <p>Deploy your first VPS or game server to see it listed here.</p>
+        <a href="{{ url_for('pricing') }}" class="btn btn-primary">Browse plans</a>
+      </div>
+      <div class="why-item">
+        <h3>Account</h3>
+        <p>Signed in as {{ current_user.email }}.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

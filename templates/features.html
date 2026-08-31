@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Features{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow-plain">Features</span>
+    <h1>Everything runs through one panel</h1>
+    <p class="hero-lede">Provisioning, monitoring, billing, and support — the pieces that usually live in five different tabs live in one here.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap feature-rows">
+
+    <div class="feature-row">
+      <div class="feature-copy">
+        <h2>Deploy in under a minute</h2>
+        <p>Choose a plan, an operating system or game, and a region. Your instance is provisioned and reachable in under 60 seconds — no manual queue, no waiting on a ticket.</p>
+      </div>
+      <div class="feature-visual" aria-hidden="true">
+        <div class="mock-panel">
+          <div class="mock-line mock-line--label">Deploying vps-04.hectorhosting</div>
+          <div class="mock-line">Provisioning NVMe volume…</div>
+          <div class="mock-line">Assigning dedicated IPv4…</div>
+          <div class="mock-line mock-line--done">Server ready — 42s</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row feature-row--reverse">
+      <div class="feature-copy">
+        <h2>DDoS protection, always on</h2>
+        <p>Every server sits behind network-level filtering that scrubs volumetric attacks before they reach your instance. It's not an add-on you have to remember to enable.</p>
+      </div>
+      <div class="feature-visual" aria-hidden="true">
+        <div class="mock-panel">
+          <div class="mock-line mock-line--label">Network shield</div>
+          <div class="mock-line mock-line--done">Status: Active</div>
+          <div class="mock-line">Filtered today: 3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-copy">
+        <h2>Snapshots and backups</h2>
+        <p>Take a manual snapshot before a risky change, or lean on automated backups that run on a schedule matched to your plan. Restore in a few clicks, not a support ticket.</p>
+      </div>
+      <div class="feature-visual" aria-hidden="true">
+        <div class="mock-panel">
+          <div class="mock-line mock-line--label">Backups</div>
+          <div class="mock-line">Today, 03:00 — 1.2 GB</div>
+          <div class="mock-line">Yesterday, 03:00 — 1.1 GB</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row feature-row--reverse">
+      <div class="feature-copy">
+        <h2>Support that responds</h2>
+        <p>A ticket to our team gets a first human response in under 15 minutes, around the clock. No bot loop, no three-day wait on a billing question.</p>
+      </div>
+      <div class="feature-visual" aria-hidden="true">
+        <div class="mock-panel">
+          <div class="mock-line mock-line--label">Support queue</div>
+          <div class="mock-line mock-line--done">Avg. first response: 11m</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Also included</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><h3>Two-factor login</h3><p>Optional TOTP two-factor authentication for your account.</p></div>
+      <div class="why-item"><h3>Usage graphs</h3><p>CPU, RAM, disk, and bandwidth history for every instance.</p></div>
+      <div class="why-item"><h3>API access</h3><p>Automate provisioning and management with a documented REST API.</p></div>
+      <div class="why-item"><h3>Team members</h3><p>Invite collaborators to a server with scoped permissions.</p></div>
+      <div class="why-item"><h3>Hourly billing option</h3><p>Spin up short-lived instances and pay only for the hours used.</p></div>
+      <div class="why-item"><h3>Migration assistance</h3><p>Our team helps move existing servers over at no extra charge.</p></div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

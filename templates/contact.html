@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow-plain">Contact</span>
+    <h1>Talk to the team</h1>
+    <p class="hero-lede">Sales, support, or just a question about a plan — send it here.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap form-wrap">
+    <form method="POST" novalidate class="card-form">
+      {{ form.hidden_tag() }}
+
+      <div class="field">
+        {{ form.name.label }}
+        {{ form.name(class_="input") }}
+        {% for e in form.name.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+      </div>
+
+      <div class="field">
+        {{ form.email.label }}
+        {{ form.email(class_="input") }}
+        {% for e in form.email.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+      </div>
+
+      <div class="field">
+        {{ form.subject.label }}
+        {{ form.subject(class_="input") }}
+        {% for e in form.subject.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+      </div>
+
+      <div class="field">
+        {{ form.message.label }}
+        {{ form.message(class_="input textarea", rows=6) }}
+        {% for e in form.message.errors %}<span class="field-error">{{ e }}</span>{% endfor %}
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

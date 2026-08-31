@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow-plain">About</span>
+    <h1>Infrastructure run by people who get paged too</h1>
+    <p class="hero-lede">HectorHosting started as a small team tired of hosting providers that oversell capacity and disappear when something breaks. We built the provider we wanted to use.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap about-grid">
+    <div class="why-item">
+      <h3>What we run</h3>
+      <p>NVMe-backed KVM virtual machines and managed game server nodes, spread across data centers chosen for latency and network stability rather than the lowest possible price.</p>
+    </div>
+    <div class="why-item">
+      <h3>How we price</h3>
+      <p>We publish real renewal prices, not first-term promo rates. What you see on the plan page is what you'll pay next month too.</p>
+    </div>
+    <div class="why-item">
+      <h3>How we support</h3>
+      <p>Our on-call team answers tickets directly — no outsourced first-line queue reading from a script.</p>
+    </div>
+    <div class="why-item">
+      <h3>What's next</h3>
+      <p>We're expanding regional coverage and adding managed database and object storage add-ons for VPS customers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt-bg cta-band">
+  <div class="wrap cta-inner">
+    <h2>Questions before you deploy?</h2>
+    <p>Reach out and a real person will get back to you.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Contact us</a>
+  </div>
+</section>
+
+{% endblock %}

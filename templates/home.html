@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}HectorHosting{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Servers that don't blink.</h1>
+      <p class="hero-lede">NVMe VPS instances and one-click game servers, deployed in under 60 seconds, on a network built to stay online.</p>
+      <div class="hero-actions">
+        <a href="{{ url_for('pricing') }}" class="btn btn-primary btn-lg">See plans</a>
+        <a href="{{ url_for('vps') }}" class="btn btn-ghost btn-lg">Explore VPS</a>
+      </div>
+    </div>
+
+    <div class="status-strip" aria-label="Live network status">
+      <div class="status-row">
+        <span class="status-dot"></span>
+        <span>All systems operational</span>
+      </div>
+      <div class="status-metrics">
+        <div class="metric">
+          <span class="metric-value">99.98%</span>
+          <span class="metric-label">Uptime, last 90 days</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">11</span>
+          <span class="metric-label">Regions online</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">&lt;9ms</span>
+          <span class="metric-label">Control panel latency</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">42s</span>
+          <span class="metric-label">Avg. deploy time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section products">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Two products, one control panel</h2>
+      <p>Whatever you're running, it's provisioned, billed, and monitored in the same place.</p>
+    </div>
+
+    <div class="product-split">
+      <article class="product-card product-card--vps">
+        <h3>VPS Hosting</h3>
+        <p>KVM virtual machines with dedicated vCPU cores, NVMe storage, and full root access. Run anything from a personal project to a production API.</p>
+        <ul class="check-list">
+          <li>Full root / admin access</li>
+          <li>Snapshot backups on demand</li>
+          <li>Choice of 9 Linux distros or Windows Server</li>
+        </ul>
+        <a href="{{ url_for('vps') }}" class="btn btn-primary">View VPS plans</a>
+      </article>
+
+      <article class="product-card product-card--game">
+        <h3>Game Servers</h3>
+        <p>One-click deploys for the games your community already plays, with automated restarts, mod support, and a web console — no SSH required.</p>
+        <ul class="check-list">
+          <li>Minecraft, Rust, ARK, CS2, Valheim & more</li>
+          <li>DDoS-mitigated network by default</li>
+          <li>Automatic backups before every update</li>
+        </ul>
+        <a href="{{ url_for('game_servers') }}" class="btn btn-primary">View game server plans</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section why">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Built for people who read the fine print</h2>
+      <p>No overselling, no hidden throttling, no surprise renewal pricing.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>Dedicated resources</h3>
+        <p>Your vCPU and RAM allocation is reserved, not oversold across a shared pool.</p>
+      </div>
+      <div class="why-item">
+        <h3>Transparent pricing</h3>
+        <p>The price you see on the plan page is what renews — no promotional bait rates.</p>
+      </div>
+      <div class="why-item">
+        <h3>Real humans, fast</h3>
+        <p>Support tickets get a first response in under 15 minutes, day or night.</p>
+      </div>
+      <div class="why-item">
+        <h3>Security by default</h3>
+        <p>Every instance ships with a firewall, fail2ban, and automatic security patching available out of the box.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-band">
+  <div class="wrap cta-inner">
+    <h2>Spin up your first server today</h2>
+    <p>Most VPS and game server plans deploy in under a minute.</p>
+    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">Create your account</a>
+  </div>
+</section>
+
+{% endblock %}
