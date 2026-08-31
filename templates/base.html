@@ -2,20 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
-
-  <title>
-    {% block title %}HectorHosting{% endblock %}
-    — VPS & Game Server Hosting
-  </title>
+  <title>{% block title %}HectorHosting{% endblock %} — VPS & Game Server Hosting</title>
 
   <meta
     name="description"
-    content="HectorHosting provides high-performance game servers and VPS hosting with reliable infrastructure and DDoS protection."
+    content="HectorHosting provides high-performance game servers, VPS hosting and reliable infrastructure."
   >
 
   <link
@@ -24,13 +17,9 @@
     href="{{ url_for('static', filename='img/logo.png') }}"
   >
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
@@ -43,23 +32,15 @@
   >
 </head>
 
-
 <body>
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
-
+  <!-- HEADER -->
   <header class="site-header">
 
-    <div class="header-container">
+    <div class="header-inner">
 
       <!-- LOGO -->
-
-      <a
-        href="{{ url_for('home') }}"
-        class="brand"
-      >
+      <a href="{{ url_for('home') }}" class="brand">
 
         <img
           src="{{ url_for('static', filename='img/logo.png') }}"
@@ -74,8 +55,7 @@
       </a>
 
 
-      <!-- MOBILE MENU BUTTON -->
-
+      <!-- MOBILE BUTTON -->
       <input
         type="checkbox"
         id="nav-toggle"
@@ -84,7 +64,7 @@
 
       <label
         for="nav-toggle"
-        class="nav-burger"
+        class="nav-toggle-label"
         aria-label="Open navigation"
       >
         <span></span>
@@ -94,153 +74,68 @@
 
 
       <!-- NAVIGATION -->
-
       <nav class="site-nav">
-
-
-        <!-- HOME -->
 
         <a
           href="{{ url_for('home') }}"
-          class="nav-link {% if request.endpoint == 'home' %}active{% endif %}"
+          class="{{ 'active' if request.endpoint == 'home' }}"
         >
           <span class="nav-icon">⌂</span>
           Home
         </a>
 
 
-        <!-- GAME SERVERS -->
-
         <a
           href="{{ url_for('game_servers') }}"
-          class="nav-link {% if request.endpoint == 'game_servers' %}active{% endif %}"
+          class="{{ 'active' if request.endpoint == 'game_servers' }}"
         >
-          <span class="nav-icon">◈</span>
+          <span class="nav-icon">⌁</span>
           Game Servers
+          <span class="nav-arrow">⌄</span>
         </a>
 
 
-        <!-- VPS -->
-
         <a
           href="{{ url_for('vps') }}"
-          class="nav-link {% if request.endpoint == 'vps' %}active{% endif %}"
+          class="{{ 'active' if request.endpoint == 'vps' }}"
         >
           <span class="nav-icon">▣</span>
           VPS
         </a>
 
 
-        <!-- OTHER HOSTING -->
-
-        <div class="nav-dropdown">
-
-          <button
-            type="button"
-            class="nav-dropdown-button"
-          >
-            <span class="nav-icon">▤</span>
-            Other Hosting
-            <span class="dropdown-arrow">⌄</span>
-          </button>
+        <a href="{{ url_for('features') }}">
+          <span class="nav-icon">▤</span>
+          Other Hosting
+          <span class="nav-arrow">⌄</span>
+        </a>
 
 
-          <div class="dropdown-menu">
-
-            <a href="{{ url_for('features') }}">
-              Features
-            </a>
-
-            <a href="{{ url_for('pricing') }}">
-              Pricing
-            </a>
-
-            <a href="{{ url_for('contact') }}">
-              Contact
-            </a>
-
-          </div>
-
-        </div>
+        <a
+          href="{{ url_for('about') }}"
+          class="{{ 'active' if request.endpoint == 'about' }}"
+        >
+          <span class="nav-icon">▥</span>
+          Company
+          <span class="nav-arrow">⌄</span>
+        </a>
 
 
-        <!-- COMPANY -->
-
-        <div class="nav-dropdown">
-
-          <button
-            type="button"
-            class="nav-dropdown-button"
-          >
-            <span class="nav-icon">▥</span>
-            Company
-            <span class="dropdown-arrow">⌄</span>
-          </button>
-
-
-          <div class="dropdown-menu">
-
-            <a href="{{ url_for('about') }}">
-              About Us
-            </a>
-
-            <a href="{{ url_for('features') }}">
-              Features
-            </a>
-
-            <a href="{{ url_for('contact') }}">
-              Contact
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- LEGAL -->
-
-        <div class="nav-dropdown">
-
-          <button
-            type="button"
-            class="nav-dropdown-button"
-          >
-            <span class="nav-icon">⚖</span>
-            Legal
-            <span class="dropdown-arrow">⌄</span>
-          </button>
-
-
-          <div class="dropdown-menu">
-
-            <a href="{{ url_for('contact') }}">
-              Contact
-            </a>
-
-            <a href="{{ url_for('about') }}">
-              About HectorHosting
-            </a>
-
-          </div>
-
-        </div>
-
+        <a href="{{ url_for('contact') }}">
+          <span class="nav-icon">⚖</span>
+          Legal
+          <span class="nav-arrow">⌄</span>
+        </a>
 
       </nav>
 
 
-      <!-- HEADER ACTIONS -->
-
+      <!-- RIGHT SIDE -->
       <div class="header-actions">
 
-        <div class="currency-selector">
-
+        <div class="currency-switcher">
           <span>$ USD</span>
-
-          <span class="currency-divider"></span>
-
           <strong>₹ INR</strong>
-
         </div>
 
 
@@ -271,20 +166,17 @@
   </header>
 
 
-  <!-- =====================================================
-       FLASH MESSAGES
-  ====================================================== -->
-
+  <!-- FLASH MESSAGES -->
   {% with messages = get_flashed_messages(with_categories=true) %}
 
     {% if messages %}
 
       <div class="flash-container">
 
-        {% for category, msg in messages %}
+        {% for category, message in messages %}
 
           <div class="flash flash-{{ category }}">
-            {{ msg }}
+            {{ message }}
           </div>
 
         {% endfor %}
@@ -296,10 +188,7 @@
   {% endwith %}
 
 
-  <!-- =====================================================
-       MAIN CONTENT
-  ====================================================== -->
-
+  <!-- MAIN -->
   <main id="main">
 
     {% block content %}{% endblock %}
@@ -307,21 +196,14 @@
   </main>
 
 
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
-
+  <!-- FOOTER -->
   <footer class="site-footer">
 
-    <div class="footer-container">
-
+    <div class="footer-inner">
 
       <div class="footer-brand">
 
-        <a
-          href="{{ url_for('home') }}"
-          class="brand"
-        >
+        <a href="{{ url_for('home') }}" class="brand">
 
           <img
             src="{{ url_for('static', filename='img/logo.png') }}"
@@ -336,8 +218,8 @@
         </a>
 
         <p>
-          High-performance hosting built for
-          reliability, speed and growth.
+          High-performance infrastructure for games,
+          applications and online projects.
         </p>
 
       </div>
@@ -352,7 +234,7 @@
         </a>
 
         <a href="{{ url_for('vps') }}">
-          VPS Hosting
+          VPS
         </a>
 
         <a href="{{ url_for('pricing') }}">
@@ -392,17 +274,17 @@
           </a>
 
           <a href="{{ url_for('logout') }}">
-            Sign Out
+            Sign out
           </a>
 
         {% else %}
 
           <a href="{{ url_for('login') }}">
-            Sign In
+            Sign in
           </a>
 
           <a href="{{ url_for('register') }}">
-            Create Account
+            Create account
           </a>
 
         {% endif %}
@@ -414,26 +296,20 @@
 
     <div class="footer-bottom">
 
-      <div class="footer-container">
+      <span>
+        © 2026 HectorHosting. All rights reserved.
+      </span>
 
-        <span>
-          © 2026 HectorHosting. All rights reserved.
-        </span>
-
-        <span>
-          Built for performance.
-        </span>
-
-      </div>
+      <span>
+        Built for performance.
+      </span>
 
     </div>
 
   </footer>
 
 
-  <script
-    src="{{ url_for('static', filename='js/main.js') }}"
-  ></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
 </html>
