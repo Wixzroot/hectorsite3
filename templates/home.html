@@ -1,111 +1,205 @@
 {% extends "base.html" %}
+
 {% block title %}HectorHosting{% endblock %}
+
 {% block content %}
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <h1>Servers that don't blink.</h1>
-      <p class="hero-lede">NVMe VPS instances and one-click game servers, deployed in under 60 seconds, on a network built to stay online.</p>
-      <div class="hero-actions">
-        <a href="{{ url_for('pricing') }}" class="btn btn-primary btn-lg">See plans</a>
-        <a href="{{ url_for('vps') }}" class="btn btn-ghost btn-lg">Explore VPS</a>
-      </div>
-    </div>
+<section class="hh-home">
 
-    <div class="status-strip" aria-label="Live network status">
-      <div class="status-row">
-        <span class="status-dot"></span>
-        <span>All systems operational</span>
-      </div>
-      <div class="status-metrics">
-        <div class="metric">
-          <span class="metric-value">99.98%</span>
-          <span class="metric-label">Uptime, last 90 days</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">11</span>
-          <span class="metric-label">Regions online</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">&lt;9ms</span>
-          <span class="metric-label">Control panel latency</span>
-        </div>
-        <div class="metric">
-          <span class="metric-value">42s</span>
-          <span class="metric-label">Avg. deploy time</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section products">
+  <!-- Service Cards -->
   <div class="wrap">
-    <div class="section-head">
-      <h2>Two products, one control panel</h2>
-      <p>Whatever you're running, it's provisioned, billed, and monitored in the same place.</p>
+
+    <div class="service-grid">
+
+      <a href="{{ url_for('game_servers') }}" class="service-card">
+        <div class="service-top">
+          <div class="service-icon minecraft-icon">◇</div>
+          <div>
+            <h3>Minecraft Hosting</h3>
+            <p>Budget and premium Minecraft hosting with Pterodactyl Panel</p>
+          </div>
+          <span class="service-menu">••</span>
+        </div>
+
+        <div class="service-bottom">
+          <div>
+            <strong>₹149</strong>
+            <span>/month</span>
+          </div>
+          <span class="service-arrow">›</span>
+        </div>
+      </a>
+
+
+      <a href="{{ url_for('vps') }}" class="service-card">
+        <div class="service-top">
+          <div class="service-icon vps-icon">▣</div>
+          <div>
+            <h3>VPS Hosting</h3>
+            <p>India and Germany VPS hosting with full root access</p>
+          </div>
+          <span class="service-menu">••</span>
+        </div>
+
+        <div class="service-bottom">
+          <div>
+            <strong>₹349</strong>
+            <span>/month</span>
+          </div>
+          <span class="service-arrow">›</span>
+        </div>
+      </a>
+
+
+      <a href="{{ url_for('contact') }}" class="service-card">
+        <div class="service-top">
+          <div class="service-icon web-icon">⌘</div>
+          <div>
+            <h3>Web Hosting</h3>
+            <p>Reliable web hosting with optimized performance</p>
+          </div>
+          <span class="service-menu">••</span>
+        </div>
+
+        <div class="service-bottom">
+          <div>
+            <strong>₹99</strong>
+            <span>/month</span>
+          </div>
+          <span class="service-arrow">›</span>
+        </div>
+      </a>
+
+
+      <a href="{{ url_for('contact') }}" class="service-card">
+        <div class="service-top">
+          <div class="service-icon discord-icon">●</div>
+          <div>
+            <h3>Discord Bot</h3>
+            <p>Frankfurt and Washington D.C. bot hosting with backup security</p>
+          </div>
+          <span class="service-menu">••</span>
+        </div>
+
+        <div class="service-bottom">
+          <div>
+            <strong>₹30</strong>
+            <span>/month</span>
+          </div>
+          <span class="service-arrow">›</span>
+        </div>
+      </a>
+
     </div>
 
-    <div class="product-split">
-      <article class="product-card product-card--vps">
-        <h3>VPS Hosting</h3>
-        <p>KVM virtual machines with dedicated vCPU cores, NVMe storage, and full root access. Run anything from a personal project to a production API.</p>
-        <ul class="check-list">
-          <li>Full root / admin access</li>
-          <li>Snapshot backups on demand</li>
-          <li>Choice of 9 Linux distros or Windows Server</li>
-        </ul>
-        <a href="{{ url_for('vps') }}" class="btn btn-primary">View VPS plans</a>
-      </article>
 
-      <article class="product-card product-card--game">
-        <h3>Game Servers</h3>
-        <p>One-click deploys for the games your community already plays, with automated restarts, mod support, and a web console — no SSH required.</p>
-        <ul class="check-list">
-          <li>Minecraft, Rust, ARK, CS2, Valheim & more</li>
-          <li>DDoS-mitigated network by default</li>
-          <li>Automatic backups before every update</li>
-        </ul>
-        <a href="{{ url_for('game_servers') }}" class="btn btn-primary">View game server plans</a>
-      </article>
+    <!-- Performance Banner -->
+    <div class="feature-banner performance-banner">
+
+      <div class="feature-stat">
+        <span class="feature-label">SERVER PERFORMANCE</span>
+        <strong>3.0GHz</strong>
+        <span class="feature-small">HARDWARE OPTIONS</span>
+      </div>
+
+      <div class="feature-content">
+        <p>
+          Our Minecraft plans are easy to understand. Budget plans are a good
+          fit for small private servers, simple survival worlds, and lower
+          player counts. Premium plans are better for bigger worlds, more
+          plugins,
+          more players, and people who want stronger performance from day one.
+        </p>
+      </div>
+
     </div>
+
+
+    <!-- Game Hosting / DDoS -->
+    <div class="feature-banner security-banner">
+
+      <div class="security-content">
+        <p>
+          Game hosting comes with DDoS protection and off-site backups.
+          If your server breaks after an update, a bad plugin, or a world
+          issue, you can restore a backup and get back online faster.
+        </p>
+      </div>
+
+      <div class="security-stat">
+        <span class="feature-label">DDOS SECURITY</span>
+        <strong>10<span>Tbps</span></strong>
+      </div>
+
+    </div>
+
+
+    <!-- Why HectorHosting -->
+    <section class="hh-about">
+
+      <div class="hh-about-heading">
+        <span class="feature-label">WHY HECTORHOSTING</span>
+        <h2>Infrastructure built for reliability.</h2>
+        <p>
+          High-performance infrastructure, straightforward pricing and
+          protection designed for communities and businesses.
+        </p>
+      </div>
+
+      <div class="hh-about-grid">
+
+        <div>
+          <span class="about-number">01</span>
+          <h3>High Performance</h3>
+          <p>Powerful hardware designed for demanding workloads.</p>
+        </div>
+
+        <div>
+          <span class="about-number">02</span>
+          <h3>DDoS Protection</h3>
+          <p>Network protection designed to keep your services online.</p>
+        </div>
+
+        <div>
+          <span class="about-number">03</span>
+          <h3>Fast Deployment</h3>
+          <p>Deploy your server quickly and get started without unnecessary delays.</p>
+        </div>
+
+        <div>
+          <span class="about-number">04</span>
+          <h3>Simple Control</h3>
+          <p>Manage your hosting through an easy-to-use control panel.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="hh-cta">
+
+      <div>
+        <span class="feature-label">READY TO DEPLOY?</span>
+        <h2>Build your server with HectorHosting.</h2>
+        <p>Choose a plan and get your infrastructure online.</p>
+      </div>
+
+      <div class="hh-cta-actions">
+        <a href="{{ url_for('pricing') }}" class="hh-btn hh-btn-primary">
+          View Plans
+        </a>
+
+        <a href="{{ url_for('register') }}" class="hh-btn hh-btn-secondary">
+          Create Account
+        </a>
+      </div>
+
+    </section>
+
   </div>
-</section>
 
-<section class="section why">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Built for people who read the fine print</h2>
-      <p>No overselling, no hidden throttling, no surprise renewal pricing.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-item">
-        <h3>Dedicated resources</h3>
-        <p>Your vCPU and RAM allocation is reserved, not oversold across a shared pool.</p>
-      </div>
-      <div class="why-item">
-        <h3>Transparent pricing</h3>
-        <p>The price you see on the plan page is what renews — no promotional bait rates.</p>
-      </div>
-      <div class="why-item">
-        <h3>Real humans, fast</h3>
-        <p>Support tickets get a first response in under 15 minutes, day or night.</p>
-      </div>
-      <div class="why-item">
-        <h3>Security by default</h3>
-        <p>Every instance ships with a firewall, fail2ban, and automatic security patching available out of the box.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section cta-band">
-  <div class="wrap cta-inner">
-    <h2>Spin up your first server today</h2>
-    <p>Most VPS and game server plans deploy in under a minute.</p>
-    <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg">Create your account</a>
-  </div>
 </section>
 
 {% endblock %}
