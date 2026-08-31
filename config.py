@@ -9,8 +9,7 @@ class Config:
     # per-process key in dev so the app is never left with a hardcoded default.
     SECRET_KEY = os.environ.get("SECRET_KEY") or secrets.token_hex(32)
 
-    SQLALCHEMY_DATABASE_URI = os.environ.get(
-        "DATABASE_URL", "sqlite:///" + os.path.join(basedir, "instance", "hectorhosting.db")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL") or "sqlite:////tmp/hectorhosting.db"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
