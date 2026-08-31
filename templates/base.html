@@ -15,7 +15,7 @@
 
   <meta
     name="description"
-    content="HectorHosting provides high-performance VPS and game server hosting with DDoS protection and reliable infrastructure."
+    content="HectorHosting provides high-performance game servers and VPS hosting with reliable infrastructure and DDoS protection."
   >
 
   <link
@@ -33,7 +33,7 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
@@ -43,13 +43,18 @@
   >
 </head>
 
+
 <body>
 
-  <!-- ================= HEADER ================= -->
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
   <header class="site-header">
 
-    <div class="wrap header-row">
+    <div class="header-container">
+
+      <!-- LOGO -->
 
       <a
         href="{{ url_for('home') }}"
@@ -63,13 +68,13 @@
         >
 
         <span class="brand-name">
-          Hector<span class="brand-accent">Hosting</span>
+          Hector<span>Hosting</span>
         </span>
 
       </a>
 
 
-      <!-- Mobile menu -->
+      <!-- MOBILE MENU BUTTON -->
 
       <input
         type="checkbox"
@@ -80,7 +85,7 @@
       <label
         for="nav-toggle"
         class="nav-burger"
-        aria-label="Toggle navigation"
+        aria-label="Open navigation"
       >
         <span></span>
         <span></span>
@@ -88,105 +93,193 @@
       </label>
 
 
-      <!-- Navigation -->
+      <!-- NAVIGATION -->
 
       <nav class="site-nav">
 
+
+        <!-- HOME -->
+
+        <a
+          href="{{ url_for('home') }}"
+          class="nav-link {% if request.endpoint == 'home' %}active{% endif %}"
+        >
+          <span class="nav-icon">⌂</span>
+          Home
+        </a>
+
+
+        <!-- GAME SERVERS -->
+
         <a
           href="{{ url_for('game_servers') }}"
-          class="{{ 'is-active' if request.endpoint == 'game_servers' }}"
+          class="nav-link {% if request.endpoint == 'game_servers' %}active{% endif %}"
         >
+          <span class="nav-icon">◈</span>
           Game Servers
         </a>
 
+
+        <!-- VPS -->
+
         <a
           href="{{ url_for('vps') }}"
-          class="{{ 'is-active' if request.endpoint == 'vps' }}"
+          class="nav-link {% if request.endpoint == 'vps' %}active{% endif %}"
         >
-          VPS Hosting
-        </a>
-
-        <a
-          href="{{ url_for('features') }}"
-          class="{{ 'is-active' if request.endpoint == 'features' }}"
-        >
-          Features
-        </a>
-
-        <a
-          href="{{ url_for('pricing') }}"
-          class="{{ 'is-active' if request.endpoint == 'pricing' }}"
-        >
-          Pricing
-        </a>
-
-        <a
-          href="{{ url_for('about') }}"
-          class="{{ 'is-active' if request.endpoint == 'about' }}"
-        >
-          About
-        </a>
-
-        <a
-          href="{{ url_for('contact') }}"
-          class="{{ 'is-active' if request.endpoint == 'contact' }}"
-        >
-          Contact
+          <span class="nav-icon">▣</span>
+          VPS
         </a>
 
 
-        <div class="nav-auth">
+        <!-- OTHER HOSTING -->
 
-          {% if current_user.is_authenticated %}
+        <div class="nav-dropdown">
 
-            <a
-              href="{{ url_for('dashboard') }}"
-              class="btn btn-ghost"
-            >
-              Dashboard
+          <button
+            type="button"
+            class="nav-dropdown-button"
+          >
+            <span class="nav-icon">▤</span>
+            Other Hosting
+            <span class="dropdown-arrow">⌄</span>
+          </button>
+
+
+          <div class="dropdown-menu">
+
+            <a href="{{ url_for('features') }}">
+              Features
             </a>
 
-            <a
-              href="{{ url_for('logout') }}"
-              class="btn btn-primary"
-            >
-              Sign out
+            <a href="{{ url_for('pricing') }}">
+              Pricing
             </a>
 
-          {% else %}
-
-            <a
-              href="{{ url_for('login') }}"
-              class="btn btn-ghost"
-            >
-              Sign in
+            <a href="{{ url_for('contact') }}">
+              Contact
             </a>
 
-            <a
-              href="{{ url_for('register') }}"
-              class="btn btn-primary"
-            >
-              Get started
-            </a>
-
-          {% endif %}
+          </div>
 
         </div>
 
+
+        <!-- COMPANY -->
+
+        <div class="nav-dropdown">
+
+          <button
+            type="button"
+            class="nav-dropdown-button"
+          >
+            <span class="nav-icon">▥</span>
+            Company
+            <span class="dropdown-arrow">⌄</span>
+          </button>
+
+
+          <div class="dropdown-menu">
+
+            <a href="{{ url_for('about') }}">
+              About Us
+            </a>
+
+            <a href="{{ url_for('features') }}">
+              Features
+            </a>
+
+            <a href="{{ url_for('contact') }}">
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- LEGAL -->
+
+        <div class="nav-dropdown">
+
+          <button
+            type="button"
+            class="nav-dropdown-button"
+          >
+            <span class="nav-icon">⚖</span>
+            Legal
+            <span class="dropdown-arrow">⌄</span>
+          </button>
+
+
+          <div class="dropdown-menu">
+
+            <a href="{{ url_for('contact') }}">
+              Contact
+            </a>
+
+            <a href="{{ url_for('about') }}">
+              About HectorHosting
+            </a>
+
+          </div>
+
+        </div>
+
+
       </nav>
+
+
+      <!-- HEADER ACTIONS -->
+
+      <div class="header-actions">
+
+        <div class="currency-selector">
+
+          <span>$ USD</span>
+
+          <span class="currency-divider"></span>
+
+          <strong>₹ INR</strong>
+
+        </div>
+
+
+        {% if current_user.is_authenticated %}
+
+          <a
+            href="{{ url_for('dashboard') }}"
+            class="header-button"
+          >
+            Dashboard
+          </a>
+
+        {% else %}
+
+          <a
+            href="{{ url_for('register') }}"
+            class="header-button"
+          >
+            Get Started
+          </a>
+
+        {% endif %}
+
+      </div>
 
     </div>
 
   </header>
 
 
-  <!-- ================= FLASH MESSAGES ================= -->
+  <!-- =====================================================
+       FLASH MESSAGES
+  ====================================================== -->
 
   {% with messages = get_flashed_messages(with_categories=true) %}
 
     {% if messages %}
 
-      <div class="flash-stack wrap">
+      <div class="flash-container">
 
         {% for category, msg in messages %}
 
@@ -203,7 +296,9 @@
   {% endwith %}
 
 
-  <!-- ================= PAGE CONTENT ================= -->
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
 
   <main id="main">
 
@@ -212,11 +307,13 @@
   </main>
 
 
-  <!-- ================= FOOTER ================= -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
 
   <footer class="site-footer">
 
-    <div class="wrap footer-grid">
+    <div class="footer-container">
 
 
       <div class="footer-brand">
@@ -233,20 +330,20 @@
           >
 
           <span class="brand-name">
-            Hector<span class="brand-accent">Hosting</span>
+            Hector<span>Hosting</span>
           </span>
 
         </a>
 
         <p>
-          High-performance infrastructure for
-          game servers, VPS and online projects.
+          High-performance hosting built for
+          reliability, speed and growth.
         </p>
 
       </div>
 
 
-      <div class="footer-col">
+      <div class="footer-column">
 
         <h3>Hosting</h3>
 
@@ -265,7 +362,7 @@
       </div>
 
 
-      <div class="footer-col">
+      <div class="footer-column">
 
         <h3>Company</h3>
 
@@ -284,7 +381,7 @@
       </div>
 
 
-      <div class="footer-col">
+      <div class="footer-column">
 
         <h3>Account</h3>
 
@@ -295,17 +392,17 @@
           </a>
 
           <a href="{{ url_for('logout') }}">
-            Sign out
+            Sign Out
           </a>
 
         {% else %}
 
           <a href="{{ url_for('login') }}">
-            Sign in
+            Sign In
           </a>
 
           <a href="{{ url_for('register') }}">
-            Create account
+            Create Account
           </a>
 
         {% endif %}
@@ -315,11 +412,19 @@
     </div>
 
 
-    <div class="wrap footer-bottom">
+    <div class="footer-bottom">
 
-      <span>
-        © 2026 HectorHosting. All rights reserved.
-      </span>
+      <div class="footer-container">
+
+        <span>
+          © 2026 HectorHosting. All rights reserved.
+        </span>
+
+        <span>
+          Built for performance.
+        </span>
+
+      </div>
 
     </div>
 
