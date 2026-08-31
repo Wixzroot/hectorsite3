@@ -64,7 +64,7 @@ def load_user(user_id):
 
 
 with app.app_context():
-    os.makedirs(os.path.join(app.root_path, "instance"), exist_ok=True)
+    os.makedirs("/tmp/instance", exist_ok=True)
     db.create_all()
 
 
