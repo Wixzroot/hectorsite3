@@ -6,48 +6,48 @@
 
 <section class="home-page">
 
-  <!-- ================= HERO ================= -->
+
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
 
   <section class="hero">
 
-    <div class="hero-background"></div>
-
     <div class="hero-inner">
+
+
+      <!-- LEFT -->
 
       <div class="hero-content">
 
+
         <!-- TRUSTPILOT -->
 
-        <a
-          href="https://www.trustpilot.com/review/hector.host"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="trustpilot"
-        >
+        <div class="trustpilot-rating">
 
-          <span class="trust-stars">
+          <div class="trust-stars">
             ★★★★★
-          </span>
+          </div>
 
           <strong>4.8</strong>
 
           <span class="trust-divider"></span>
 
-          <span class="trust-text">
-            Excellent
-          </span>
+          <span>Excellent</span>
 
-        </a>
+        </div>
 
 
         <!-- TITLE -->
 
         <h1>
-          Premium Hosting
-          <br>
-          Built for Performance
+          Premium Hosting<br>
+          Built for<br>
+          Performance
         </h1>
 
+
+        <!-- PURPLE LINE -->
 
         <div class="hero-line"></div>
 
@@ -55,8 +55,10 @@
         <!-- DESCRIPTION -->
 
         <p class="hero-description">
+
           High-performance game servers, VPS hosting and reliable
           infrastructure built for speed, security and uptime.
+
         </p>
 
 
@@ -66,14 +68,27 @@
 
           <a
             href="{{ url_for('pricing') }}"
-            class="hero-button hero-primary"
+            class="hero-button hero-button-primary"
           >
 
-            <span>Get Started Now</span>
+            <span>
+              Get Started Now
+            </span>
 
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 12h13"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="m13 6 6 6-6 6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
 
           </a>
@@ -81,7 +96,7 @@
 
           <a
             href="{{ url_for('game_servers') }}"
-            class="hero-button hero-secondary"
+            class="hero-button hero-button-secondary"
           >
             Explore Services
           </a>
@@ -91,23 +106,96 @@
       </div>
 
 
-      <!-- HERO VISUAL -->
+      <!-- RIGHT VISUAL -->
 
       <div class="hero-visual">
 
+
+        <div class="visual-glow"></div>
+
+
         <div class="server-stack">
 
-          <div class="server server-one"></div>
 
-          <div class="server server-two"></div>
+          <div class="server-card server-card-one">
 
-          <div class="server server-three"></div>
+            <div class="server-card-top">
 
-          <div class="server server-four"></div>
+              <span class="server-dot"></span>
 
-          <div class="server server-five"></div>
+              <span>Hector Node</span>
 
-          <div class="server server-six"></div>
+            </div>
+
+            <div class="server-lines">
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </div>
+
+          </div>
+
+
+          <div class="server-card server-card-two">
+
+            <div class="server-card-top">
+
+              <span class="server-dot"></span>
+
+              <span>Game Server</span>
+
+            </div>
+
+            <div class="server-lines">
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </div>
+
+          </div>
+
+
+          <div class="server-card server-card-three">
+
+            <div class="server-card-top">
+
+              <span class="server-dot"></span>
+
+              <span>VPS Instance</span>
+
+            </div>
+
+            <div class="server-lines">
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+            </div>
+
+          </div>
+
+
+          <div class="server-card server-card-four">
+
+            <div class="server-card-top">
+
+              <span class="server-dot"></span>
+
+              <span>Online</span>
+
+            </div>
+
+            <div class="server-status">
+              ACTIVE
+            </div>
+
+          </div>
+
 
         </div>
 
@@ -118,363 +206,355 @@
   </section>
 
 
-  <!-- ================= SERVICES ================= -->
+
+  <!-- =====================================================
+       SERVICES
+       ===================================================== -->
 
   <section class="services-section">
 
-    <div class="section-container">
+    <div class="section-heading">
 
-      <div class="section-heading">
+      <span class="section-label">
+        OUR SERVICES
+      </span>
 
-        <span class="section-label">
-          OUR SERVICES
-        </span>
+      <h2>
+        Infrastructure for every project.
+      </h2>
 
-        <h2>
-          Infrastructure for every project.
-        </h2>
+      <p>
+        Everything you need to deploy, manage and scale
+        your online services.
+      </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+      <!-- GAME SERVERS -->
+
+      <a
+        href="{{ url_for('game_servers') }}"
+        class="service-card"
+      >
+
+        <div class="service-card-number">
+          01
+        </div>
+
+        <div class="service-icon-box">
+
+          <svg viewBox="0 0 24 24" fill="none">
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M7 12h4M9 10v4"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+
+            <circle
+              cx="16"
+              cy="11"
+              r="1"
+              fill="currentColor"
+            />
+
+            <circle
+              cx="18"
+              cy="14"
+              r="1"
+              fill="currentColor"
+            />
+
+          </svg>
+
+        </div>
+
+        <h3>
+          Game Servers
+        </h3>
 
         <p>
-          Powerful infrastructure for gaming communities,
-          applications, websites and businesses.
+          High-performance game hosting with DDoS
+          protection, powerful hardware and fast deployment.
         </p>
 
-      </div>
+        <span class="service-link">
+          Explore
+          <span>→</span>
+        </span>
+
+      </a>
 
 
-      <div class="service-grid">
+      <!-- VPS -->
+
+      <a
+        href="{{ url_for('vps') }}"
+        class="service-card"
+      >
+
+        <div class="service-card-number">
+          02
+        </div>
+
+        <div class="service-icon-box">
+
+          <svg viewBox="0 0 24 24" fill="none">
+
+            <rect
+              x="5"
+              y="3"
+              width="14"
+              height="18"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M8 7h8M8 11h8M8 15h5"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+
+          </svg>
+
+        </div>
+
+        <h3>
+          VPS Hosting
+        </h3>
+
+        <p>
+          Reliable VPS infrastructure with full root access,
+          powerful CPUs and flexible resources.
+        </p>
+
+        <span class="service-link">
+          Explore
+          <span>→</span>
+        </span>
+
+      </a>
 
 
-        <!-- GAME SERVERS -->
+      <!-- WEB HOSTING -->
 
-        <a
-          href="{{ url_for('game_servers') }}"
-          class="service-card"
-        >
+      <a
+        href="{{ url_for('contact') }}"
+        class="service-card"
+      >
 
-          <div class="service-card-top">
+        <div class="service-card-number">
+          03
+        </div>
 
-            <span class="service-number">
-              01
-            </span>
+        <div class="service-icon-box">
 
-            <svg viewBox="0 0 24 24">
-              <path d="M3 10.5 12 3l9 7.5"></path>
-              <path d="M5 9.5V21h14V9.5"></path>
-              <path d="M9 21v-6h6v6"></path>
-            </svg>
+          <svg viewBox="0 0 24 24" fill="none">
 
-          </div>
+            <rect
+              x="3"
+              y="4"
+              width="18"
+              height="16"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
 
-          <h3>
-            Game Servers
-          </h3>
+            <path
+              d="M3 9h18"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
 
-          <p>
-            High-performance game hosting with DDoS
-            protection, powerful hardware and fast deployment.
-          </p>
+            <path
+              d="m9 13-2 2 2 2M15 13l2 2-2 2"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
 
-          <span class="service-link">
-            Explore
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </span>
+          </svg>
 
-        </a>
+        </div>
 
+        <h3>
+          Web Hosting
+        </h3>
 
-        <!-- VPS -->
+        <p>
+          Fast and reliable hosting for websites,
+          applications and online projects.
+        </p>
 
-        <a
-          href="{{ url_for('vps') }}"
-          class="service-card"
-        >
+        <span class="service-link">
+          Explore
+          <span>→</span>
+        </span>
 
-          <div class="service-card-top">
-
-            <span class="service-number">
-              02
-            </span>
-
-            <svg viewBox="0 0 24 24">
-              <rect x="4" y="4" width="16" height="6" rx="1"></rect>
-              <rect x="4" y="14" width="16" height="6" rx="1"></rect>
-              <path d="M8 7h.01"></path>
-              <path d="M8 17h.01"></path>
-              <path d="M12 7h5"></path>
-              <path d="M12 17h5"></path>
-            </svg>
-
-          </div>
-
-          <h3>
-            VPS Hosting
-          </h3>
-
-          <p>
-            Reliable VPS infrastructure with full root access,
-            powerful CPUs and flexible resources.
-          </p>
-
-          <span class="service-link">
-            Explore
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </span>
-
-        </a>
-
-
-        <!-- WEB HOSTING -->
-
-        <a
-          href="{{ url_for('contact') }}"
-          class="service-card"
-        >
-
-          <div class="service-card-top">
-
-            <span class="service-number">
-              03
-            </span>
-
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-              <path d="M3 9h18"></path>
-              <path d="m8 13-2 2 2 2"></path>
-              <path d="m12 13 2 2-2 2"></path>
-            </svg>
-
-          </div>
-
-          <h3>
-            Web Hosting
-          </h3>
-
-          <p>
-            Fast and reliable hosting for websites,
-            applications and online projects.
-          </p>
-
-          <span class="service-link">
-            Explore
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </span>
-
-        </a>
-
-
-        <!-- DISCORD BOTS -->
-
-        <a
-          href="{{ url_for('contact') }}"
-          class="service-card"
-        >
-
-          <div class="service-card-top">
-
-            <span class="service-number">
-              04
-            </span>
-
-            <svg viewBox="0 0 24 24">
-              <path d="M8 8.5c1.2-.7 2.4-1 4-1s2.8.3 4 1"></path>
-              <path d="M6 18c-1.2-2-1.8-4.7-1.3-8C5.2 7.5 7 6 9 5.5l1 1.5"></path>
-              <path d="M18 18c1.2-2 1.8-4.7 1.3-8C18.8 7.5 17 6 15 5.5l-1 1.5"></path>
-              <circle cx="9" cy="12" r="1"></circle>
-              <circle cx="15" cy="12" r="1"></circle>
-              <path d="M7 17c3 1.5 7 1.5 10 0"></path>
-            </svg>
-
-          </div>
-
-          <h3>
-            Discord Bot Hosting
-          </h3>
-
-          <p>
-            Reliable bot hosting with secure infrastructure,
-            fast deployment and stable connectivity.
-          </p>
-
-          <span class="service-link">
-            Explore
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="m13 6 6 6-6 6"></path>
-            </svg>
-          </span>
-
-        </a>
-
-      </div>
+      </a>
 
     </div>
 
   </section>
 
 
-  <!-- ================= WHY HECTOR ================= -->
+
+  <!-- =====================================================
+       WHY HECTORHOSTING
+       ===================================================== -->
 
   <section class="why-section">
 
-    <div class="section-container">
+    <div class="why-heading">
 
-      <div class="why-grid">
+      <span class="section-label">
+        WHY HECTORHOSTING
+      </span>
 
-        <div class="why-heading">
-
-          <span class="section-label">
-            WHY HECTORHOSTING
-          </span>
-
-          <h2>
-            Infrastructure built
-            for reliability.
-          </h2>
-
-          <p>
-            Powerful infrastructure, straightforward pricing
-            and protection designed for communities and
-            businesses.
-          </p>
-
-        </div>
-
-
-        <div class="why-items">
-
-          <div class="why-item">
-
-            <span>01</span>
-
-            <div>
-              <h3>
-                High Performance
-              </h3>
-
-              <p>
-                Powerful hardware designed for demanding workloads.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="why-item">
-
-            <span>02</span>
-
-            <div>
-              <h3>
-                DDoS Protection
-              </h3>
-
-              <p>
-                Network protection designed to keep your
-                services online.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="why-item">
-
-            <span>03</span>
-
-            <div>
-              <h3>
-                Fast Deployment
-              </h3>
-
-              <p>
-                Deploy your infrastructure quickly without
-                unnecessary delays.
-              </p>
-            </div>
-
-          </div>
-
-
-          <div class="why-item">
-
-            <span>04</span>
-
-            <div>
-              <h3>
-                Simple Control
-              </h3>
-
-              <p>
-                Manage your hosting through an easy-to-use
-                control panel.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
+      <h2>
+        Infrastructure built<br>
+        for reliability.
+      </h2>
 
     </div>
 
-  </section>
+
+    <div class="why-grid">
 
 
-  <!-- ================= CTA ================= -->
+      <div class="why-item">
 
-  <section class="cta-section">
+        <span>01</span>
 
-    <div class="cta-inner">
-
-      <div>
-
-        <span class="section-label">
-          READY TO DEPLOY?
-        </span>
-
-        <h2>
-          Build your server with HectorHosting.
-        </h2>
+        <h3>
+          High Performance
+        </h3>
 
         <p>
-          Choose a plan and get your infrastructure online.
+          Powerful infrastructure designed for demanding
+          workloads and busy communities.
         </p>
 
       </div>
 
 
-      <div class="cta-actions">
+      <div class="why-item">
 
-        <a
-          href="{{ url_for('pricing') }}"
-          class="hero-button hero-primary"
-        >
-          View Plans
-        </a>
+        <span>02</span>
 
-        <a
-          href="{{ url_for('register') }}"
-          class="hero-button hero-secondary"
-        >
-          Create Account
-        </a>
+        <h3>
+          DDoS Protection
+        </h3>
+
+        <p>
+          Network protection designed to keep your
+          services online when it matters.
+        </p>
+
+      </div>
+
+
+      <div class="why-item">
+
+        <span>03</span>
+
+        <h3>
+          Fast Deployment
+        </h3>
+
+        <p>
+          Get your infrastructure online quickly
+          without unnecessary delays.
+        </p>
+
+      </div>
+
+
+      <div class="why-item">
+
+        <span>04</span>
+
+        <h3>
+          Simple Control
+        </h3>
+
+        <p>
+          Manage your hosting through clean,
+          simple and familiar control panels.
+        </p>
 
       </div>
 
     </div>
 
   </section>
+
+
+
+  <!-- =====================================================
+       CTA
+       ===================================================== -->
+
+  <section class="home-cta">
+
+    <div>
+
+      <span class="section-label">
+        READY TO DEPLOY?
+      </span>
+
+      <h2>
+        Build your infrastructure<br>
+        with HectorHosting.
+      </h2>
+
+      <p>
+        Choose a plan and get your project online.
+      </p>
+
+    </div>
+
+
+    <div class="cta-actions">
+
+      <a
+        href="{{ url_for('pricing') }}"
+        class="hero-button hero-button-primary"
+      >
+        View Plans
+      </a>
+
+      <a
+        href="{{ url_for('register') }}"
+        class="hero-button hero-button-secondary"
+      >
+        Create Account
+      </a>
+
+    </div>
+
+  </section>
+
 
 </section>
 
