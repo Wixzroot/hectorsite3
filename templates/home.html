@@ -4,46 +4,218 @@
 
 {% block content %}
 
-<div style="
-    display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-    min-height:600px;
-    padding:100px;
-    background:#08080a;
-    color:#ffffff;
-">
+<section class="hh-home">
 
-    <h1 style="
-        display:block !important;
-        color:#ffffff !important;
-        font-size:60px;
-    ">
+  <!-- ================= HERO ================= -->
+
+  <section class="hero-section">
+
+    <div class="hero-content">
+
+      <!-- Trustpilot -->
+      <div class="trustpilot-rating">
+
+        <span class="trust-stars">
+          ★★★★★
+        </span>
+
+        <strong>4.8</strong>
+
+        <span>Excellent</span>
+
+        <span>on Trustpilot</span>
+
+      </div>
+
+
+      <h1>
+        Premium Hosting<br>
+        Built for Performance
+      </h1>
+
+
+      <div class="hero-line"></div>
+
+
+      <p>
+        High-performance game servers, VPS hosting and
+        reliable infrastructure built for speed, security
+        and uptime.
+      </p>
+
+
+      <div class="hero-actions">
+
+        <a
+          href="{{ url_for('pricing') }}"
+          class="hero-btn hero-btn-primary"
+        >
+          Get Started Now
+          <span>→</span>
+        </a>
+
+
+        <a
+          href="{{ url_for('game_servers') }}"
+          class="hero-btn hero-btn-secondary"
+        >
+          Explore Services
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SERVICES ================= -->
+
+  <section class="home-services">
+
+    <div class="home-section-heading">
+
+      <span>
+        OUR SERVICES
+      </span>
+
+      <h2>
+        Infrastructure for every project.
+      </h2>
+
+    </div>
+
+
+    <div class="home-service-grid">
+
+
+      <!-- GAME SERVERS -->
+
+      <a
+        href="{{ url_for('game_servers') }}"
+        class="home-service-card"
+      >
+
+        <span class="service-number">
+          01
+        </span>
+
+        <h3>
+          Game Servers
+        </h3>
+
+        <p>
+          High-performance game servers with powerful
+          hardware, DDoS protection and fast deployment.
+        </p>
+
+        <span class="service-link">
+          Explore →
+        </span>
+
+      </a>
+
+
+      <!-- VPS -->
+
+      <a
+        href="{{ url_for('vps') }}"
+        class="home-service-card"
+      >
+
+        <span class="service-number">
+          02
+        </span>
+
+        <h3>
+          VPS Hosting
+        </h3>
+
+        <p>
+          Reliable VPS infrastructure with full root
+          access, powerful CPUs and flexible resources.
+        </p>
+
+        <span class="service-link">
+          Explore →
+        </span>
+
+      </a>
+
+
+      <!-- WEB HOSTING -->
+
+      <a
+        href="{{ url_for('contact') }}"
+        class="home-service-card"
+      >
+
+        <span class="service-number">
+          03
+        </span>
+
+        <h3>
+          Web Hosting
+        </h3>
+
+        <p>
+          Fast and reliable hosting for websites,
+          applications and online projects.
+        </p>
+
+        <span class="service-link">
+          Contact Us →
+        </span>
+
+      </a>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= BOTTOM CTA ================= -->
+
+  <section class="home-services">
+
+    <div class="home-service-card">
+
+      <span class="service-number">
         HECTORHOSTING
-    </h1>
+      </span>
 
-    <p style="
-        display:block !important;
-        color:#aaaaaa !important;
-        font-size:20px;
-    ">
-        Premium Hosting Built for Performance
-    </p>
+      <h3>
+        Ready to deploy?
+      </h3>
 
-    <a
-        href="{{ url_for('pricing') }}"
-        style="
-            display:inline-block;
-            margin-top:30px;
-            padding:16px 30px;
-            background:#7c3aed;
-            color:white;
-            text-decoration:none;
-        "
-    >
-        Get Started
-    </a>
+      <p>
+        Choose your hosting solution and get your
+        infrastructure online with HectorHosting.
+      </p>
 
-</div>
+      <div class="hero-actions">
+
+        <a
+          href="{{ url_for('pricing') }}"
+          class="hero-btn hero-btn-primary"
+        >
+          View Plans →
+        </a>
+
+        <a
+          href="{{ url_for('register') }}"
+          class="hero-btn hero-btn-secondary"
+        >
+          Create Account
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>
 
 {% endblock %}
