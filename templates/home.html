@@ -1,163 +1,130 @@
 {% extends "base.html" %}
 
-{% block title %}HectorHosting - Premium Hosting{% endblock %}
+{% block title %}HectorHosting{% endblock %}
 
 {% block content %}
 
-<section class="hero-section">
+<section class="hh-home">
 
-    <!-- Background -->
-    <div class="hero-background">
-        <div class="hero-grid"></div>
-        <div class="hero-glow hero-glow-1"></div>
-        <div class="hero-glow hero-glow-2"></div>
+  <!-- HERO -->
+  <section class="hero-section">
 
-        <div class="hero-orbit hero-orbit-1"></div>
-        <div class="hero-orbit hero-orbit-2"></div>
-    </div>
+    <div class="hero-content">
 
+      <!-- Trustpilot -->
+      <div class="trustpilot-rating">
+        <span class="trust-stars">★★★★★</span>
+        <strong>4.8</strong>
+        <span>Excellent</span>
+      </div>
 
-    <div class="hero-container">
+      <h1>
+        Premium Hosting<br>
+        Built for Performance
+      </h1>
 
-        <div class="hero-content">
+      <div class="hero-line"></div>
 
-            <!-- Trustpilot -->
-            <a
-                href="https://www.trustpilot.com/review/hector.host"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="trustpilot-rating"
-            >
-                <span class="trustpilot-stars">★★★★★</span>
-                <span class="trustpilot-score">4.0</span>
-                <span class="trustpilot-reviews">· 3 REVIEWS</span>
-            </a>
+      <p>
+        High-performance game servers, VPS hosting and reliable
+        infrastructure built for speed, security and uptime.
+      </p>
 
+      <div class="hero-actions">
 
-            <!-- Main Heading -->
-            <h1>
-                Premium Hosting
-                <br>
-                <span>Built for Performance</span>
-            </h1>
+        <a
+          href="{{ url_for('pricing') }}"
+          class="hero-btn hero-btn-primary"
+        >
+          Get Started Now
+          <span>›</span>
+        </a>
 
+        <a
+          href="{{ url_for('game_servers') }}"
+          class="hero-btn hero-btn-secondary"
+        >
+          Explore Services
+        </a>
 
-            <!-- Accent Line -->
-            <div class="hero-line"></div>
-
-
-            <!-- Description -->
-            <p class="hero-description">
-                HectorHosting provides high-performance Minecraft hosting,
-                VPS hosting, web hosting, and Discord bot hosting in one place.
-                With powerful infrastructure, DDoS protection, off-site
-                backups, and reliable support, we keep your services online
-                and ready for your community.
-            </p>
-
-
-            <!-- Buttons -->
-            <div class="hero-buttons">
-
-                <a
-                    href="{{ url_for('pricing') }}"
-                    class="hero-btn hero-btn-primary"
-                >
-                    <span>Get Started Now</span>
-                    <b>›</b>
-                </a>
-
-                <a
-                    href="{{ url_for('game_servers') }}"
-                    class="hero-btn hero-btn-secondary"
-                >
-                    Explore Services
-                </a>
-
-            </div>
-
-        </div>
+      </div>
 
     </div>
 
-</section>
+  </section>
 
 
-<!-- Small section below hero -->
-<section class="home-services">
+  <!-- SERVICES -->
+  <section class="home-services">
 
-    <div class="home-services-container">
+    <div class="home-section-heading">
+      <span>OUR SERVICES</span>
 
-        <div class="home-section-heading">
-            <span>OUR SERVICES</span>
-            <h2>Everything you need to host.</h2>
-            <p>
-                Reliable infrastructure for games, applications, websites,
-                and online communities.
-            </p>
-        </div>
+      <h2>Infrastructure for every project.</h2>
+    </div>
 
 
-        <div class="home-service-grid">
+    <div class="home-service-grid">
 
-            <a
-                href="{{ url_for('game_servers') }}"
-                class="home-service-card"
-            >
-                <div class="home-service-number">01</div>
-                <h3>Minecraft Hosting</h3>
-                <p>
-                    High-performance Minecraft servers with powerful hardware,
-                    DDoS protection and easy management.
-                </p>
-                <span>Explore Hosting →</span>
-            </a>
+      <a
+        href="{{ url_for('game_servers') }}"
+        class="home-service-card"
+      >
+        <span class="service-number">01</span>
 
+        <h3>Game Servers</h3>
 
-            <a
-                href="{{ url_for('vps') }}"
-                class="home-service-card"
-            >
-                <div class="home-service-number">02</div>
-                <h3>VPS Hosting</h3>
-                <p>
-                    Reliable VPS infrastructure with full root access and
-                    flexible resources for your applications.
-                </p>
-                <span>Explore VPS →</span>
-            </a>
+        <p>
+          High-performance game hosting with DDoS protection,
+          powerful hardware and fast deployment.
+        </p>
+
+        <span class="service-link">
+          Explore →
+        </span>
+      </a>
 
 
-            <a
-                href="{{ url_for('contact') }}"
-                class="home-service-card"
-            >
-                <div class="home-service-number">03</div>
-                <h3>Web Hosting</h3>
-                <p>
-                    Fast and reliable hosting for websites, applications and
-                    online projects.
-                </p>
-                <span>Learn More →</span>
-            </a>
+      <a
+        href="{{ url_for('vps') }}"
+        class="home-service-card"
+      >
+        <span class="service-number">02</span>
+
+        <h3>VPS Hosting</h3>
+
+        <p>
+          Reliable VPS infrastructure with full root access,
+          powerful CPUs and flexible resources.
+        </p>
+
+        <span class="service-link">
+          Explore →
+        </span>
+      </a>
 
 
-            <a
-                href="{{ url_for('contact') }}"
-                class="home-service-card"
-            >
-                <div class="home-service-number">04</div>
-                <h3>Discord Bot Hosting</h3>
-                <p>
-                    Keep your Discord bots online with reliable infrastructure
-                    and consistent performance.
-                </p>
-                <span>Learn More →</span>
-            </a>
+      <a
+        href="{{ url_for('contact') }}"
+        class="home-service-card"
+      >
+        <span class="service-number">03</span>
 
-        </div>
+        <h3>Web Hosting</h3>
+
+        <p>
+          Fast and reliable hosting for websites,
+          applications and online projects.
+        </p>
+
+        <span class="service-link">
+          Explore →
+        </span>
+      </a>
 
     </div>
+
+  </section>
 
 </section>
 
