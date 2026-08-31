@@ -87,40 +87,326 @@ a:hover { color: var(--violet-2); }
 .btn-lg { padding: 14px 28px; font-size: 1rem; }
 .btn-block { display: block; width: 100%; text-align: center; }
 
-/* ---------- Header ---------- */
+/* =========================================================
+   HECTORHOSTING NAVBAR
+   ========================================================= */
+
 .site-header {
-  border-bottom: 1px solid var(--border);
-  background: rgba(10, 7, 16, 0.85);
-  backdrop-filter: blur(8px);
-  position: sticky; top: 0; z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(5, 5, 6, .94);
+
+  border-bottom: 1px solid rgba(255,255,255,.07);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
-.header-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; gap: 24px; }
-.brand { display: flex; align-items: center; gap: 10px; }
-.brand-logo { height: 34px; width: auto; display: block; }
-.brand-name { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: #fff; }
-.brand-accent { color: var(--violet-light); }
 
-.site-nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
-.site-nav a { color: var(--text-dim); font-size: 0.94rem; }
-.site-nav a:hover, .site-nav a.is-active { color: #fff; }
-.nav-auth { display: flex; gap: 10px; margin-left: 8px; }
 
-.nav-toggle, .nav-burger { display: none; }
+.header-row {
+  width: min(1180px, calc(100% - 48px));
 
-@media (max-width: 860px) {
-  .nav-toggle { display: none; }
+  min-height: 70px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: auto;
+  height: 36px;
+
+  display: block;
+}
+
+.brand-name {
+  color: #ffffff;
+
+  font-family: var(--font-display);
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: -.3px;
+}
+
+.brand-accent {
+  color: #a855f7;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.site-nav {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 28px;
+
+  flex: 1;
+
+  margin-left: 30px;
+}
+
+.site-nav a {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  color: #a8a8b2;
+
+  font-family: var(--font-display);
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+.site-nav a:hover {
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+.site-nav a.is-active {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   ========================================================= */
+
+.nav-auth {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-left: auto;
+
+  flex-shrink: 0;
+}
+
+
+.nav-start {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 40px;
+
+  padding: 10px 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #9333ea
+    );
+
+  border: 1px solid #7c3aed;
+
+  color: #ffffff !important;
+
+  font-family: var(--font-display);
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.nav-start:hover {
+  color: #ffffff !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #a855f7
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(124,58,237,.30);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.nav-toggle,
+.nav-burger {
+  display: none;
+}
+
+
+@media (max-width: 900px) {
+
+  .header-row {
+    width: calc(100% - 32px);
+
+    min-height: 66px;
+  }
+
   .nav-burger {
-    display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    width: 38px;
+    height: 38px;
+
+    margin-left: auto;
+
+    padding: 8px;
+
+    cursor: pointer;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: rgba(255,255,255,.02);
   }
-  .nav-burger span { width: 22px; height: 2px; background: var(--text); display: block; }
+
+  .nav-burger span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: #ffffff;
+
+    transition: .2s ease;
+  }
+
   .site-nav {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
     display: none;
-    position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--panel); border-bottom: 1px solid var(--border);
-    flex-direction: column; align-items: flex-start; padding: 16px 24px; gap: 14px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+
+    margin: 0;
+
+    padding: 10px 20px 20px;
+
+    background: rgba(5,5,6,.98);
+
+    border-bottom: 1px solid rgba(255,255,255,.07);
+
+    box-shadow:
+      0 15px 35px rgba(0,0,0,.35);
   }
-  .nav-auth { flex-direction: column; width: 100%; margin-left: 0; }
-  .nav-toggle:checked ~ .site-nav { display: flex; }
+
+  .site-nav a {
+    width: 100%;
+
+    padding: 13px 5px;
+
+    border-bottom: 1px solid rgba(255,255,255,.05);
+  }
+
+  .nav-auth {
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .site-nav {
+    display: flex;
+  }
+
+  .nav-toggle:checked ~ .nav-burger span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle:checked ~ .nav-burger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked ~ .nav-burger span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .brand-logo {
+    height: 32px;
+  }
+
+  .header-row {
+    width: calc(100% - 24px);
+  }
+
 }
 
 /* ---------- Flash messages ---------- */
